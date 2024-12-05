@@ -55,6 +55,15 @@ class LinkedList {
   }
 
   at(index) {
+    if (this.head === null) {
+      return "The list is empty.";
+    }
+    if (index < 0) {
+      return "Add an index which is greater than or equal to 0.";
+    }
+    if (index >= this.size()) {
+      return `The list has a total of ${this.size()} nodes. Choose a value between 0 and ${this.size()}.`;
+    }
     let currentNode = this.head;
     for (let counter = 0; counter < index; counter++) {
       currentNode = currentNode.nextNode;
