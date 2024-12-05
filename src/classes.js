@@ -70,4 +70,20 @@ class LinkedList {
     }
     return currentNode;
   }
+
+  pop() {
+    if (this.head === null) {
+      return "The list is empty.";
+    } else if (this.head === this.tail) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      let currentNode = this.head;
+      for (; currentNode.nextNode !== this.tail; ) {
+        currentNode = currentNode.nextNode;
+      }
+      this.tail = currentNode;
+      this.tail.nextNode = null;
+    }
+  }
 }
