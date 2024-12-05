@@ -45,4 +45,12 @@ class LinkedList {
       return numberOfNodes;
     }
   }
+
+  head() {
+    return this.head;
+  }
+
+  tail() {
+    return this.tail;
+  }
 }
