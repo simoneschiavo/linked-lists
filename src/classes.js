@@ -53,4 +53,12 @@ class LinkedList {
   tail() {
     return this.tail;
   }
+
+  at(index) {
+    let currentNode = this.head;
+    for (let counter = 0; counter < index; counter++) {
+      currentNode = currentNode.nextNode;
+    }
+    return currentNode;
+  }
 }
