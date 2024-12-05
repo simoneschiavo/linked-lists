@@ -86,4 +86,19 @@ class LinkedList {
       this.tail.nextNode = null;
     }
   }
+
+  contains(value) {
+    if (this.head === null) {
+      return false;
+    } else {
+      let currentNode = this.head;
+      while (currentNode !== null) {
+        if (currentNode.value === value) {
+          return true;
+        }
+        currentNode = currentNode.nextNode;
+      }
+    }
+    return false;
+  }
 }
