@@ -101,4 +101,19 @@ class LinkedList {
     }
     return false;
   }
+
+  find(value) {
+    if (this.head === null) {
+      return null;
+    } else {
+      let counter = 0;
+      for (let currentNode = this.head; currentNode !== null; counter++) {
+        if (currentNode.value === value) {
+          return counter;
+        }
+        currentNode = currentNode.nextNode;
+      }
+      return null;
+    }
+  }
 }
